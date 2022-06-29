@@ -16,7 +16,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "image": "docker build -t micro-app-app2 .",
+    "deploy": "docker run -d --network micro-app -p 8002:80 micro-app-app2"
   },
   "eslintConfig": {
     "extends": [
