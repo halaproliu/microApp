@@ -26,17 +26,17 @@ export default {
       activeIndex: '/app1',
       menus: [{
         path: '/app1',
-        name: 'app1',
+        name: 'child-vue3',
         index: '/app1'
       }, 
       {
         path: '/app2',
-        name: 'app2',
+        name: 'child-react',
         index: '/app2'
       },
       {
         path: '/app3',
-        name: 'app3',
+        name: 'child-vite-vue',
         index: '/app3'
       }]
     }
