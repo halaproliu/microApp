@@ -5,7 +5,8 @@ import { writeFileSync } from 'fs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: `${process.env.NODE_ENV === 'production' ? 'http://liuwenjian.cn' : ''}/app3/`,
+  // base: `${process.env.NODE_ENV === 'production' ? 'http://liuwenjian.cn' : ''}/app3/`,
+  base: process.env.NODE_ENV === 'production' ? 'http://liuwenjian.cn:8003' : '/app3',
   server: {
     port: 8003
   },

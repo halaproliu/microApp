@@ -3,7 +3,7 @@ import RootApp from './views/rootApp.vue'
 
 const routes = [
   {
-    path: '/app3',
+    path: window.__MICRO_APP_BASE_ROUTE__ || '/app3',
     component: RootApp,
     children: [
       {
