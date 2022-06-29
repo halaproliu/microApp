@@ -1,2 +1,2 @@
 #!/bin/bash
-docker create network micro-app
+docker network create micro-app
