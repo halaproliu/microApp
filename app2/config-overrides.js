@@ -1,7 +1,7 @@
 const {  override, overrideDevServer } = require('customize-cra')
 
 const customizePlugin = () => config => {
-  config.output.publicPath = '/app2'
+  // config.output.publicPath = '/app2'
   return config
 }
 

@@ -9,7 +9,7 @@ import config from '../config'
 export default {
   data () {
     return {
-      url: `${config.app2}/app2`
+      url: `${config.app2}`
     }
   }
 }
