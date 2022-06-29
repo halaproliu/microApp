@@ -1,15 +1,20 @@
 import Home from './views/home.vue'
+import RootApp from './views/rootApp.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/page2',
-    name: 'page2',
-    component: () => import('./views/page2.vue')
+    path: '/app3',
+    component: RootApp,
+    children: [
+      {
+        path: '',
+        component: Home
+      },
+      {
+        path: 'page2',
+        component: () => import('./views/page2.vue')
+      }
+    ]
   }
 ]
 

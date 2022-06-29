@@ -41,12 +41,20 @@ export default {
       }]
     }
   },
+  created (){
+    this.getActiveIndex()
+    window.addEventListener('popstate', () => this.getActiveIndex())
+  },
   methods: {
+    getActiveIndex() {
+      const pathname = location.pathname
+      this.activeIndex = pathname
+    },
     handleSelect (key) {
-      const obj = this.menus.find(menu => menu.index === key)
+      // const obj = this.menus.find(menu => menu.index === key)
       console.log(getActiveApps())
       this.activeIndex = key
-      microApp.setData(obj.name, { path: key })
+      // microApp.setData(obj.name, { path: key })
     },
     isActive (path) {
       return this.$route.path === path

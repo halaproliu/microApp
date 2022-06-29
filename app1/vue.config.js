@@ -1,6 +1,6 @@
 module.exports = {
   // outputDir: '',
-  // publicPath: '/app1',
+  publicPath: '/app1',
   devServer: {
     port: 8001,
     headers: {

@@ -15,7 +15,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "app1" */ '@/pages/app2.vue'),
   },
   {
-    path: '/app3',
+    path: '/app3*',
     name: 'app3',
     component: () => import(/* webpackChunkName: "app1" */ '@/pages/app3.vue'),
   }

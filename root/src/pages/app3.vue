@@ -1,6 +1,6 @@
 <template>
   <div>
-    <micro-app name='app3' :url='url' inline disablesandbox @created='handleCreate' @mounted='handleMount'></micro-app>
+    <micro-app name='app3' :url='url' baseroute="/app3" inline disablesandbox @created='handleCreate' @mounted='handleMount'></micro-app>
   </div>
 </template>
 

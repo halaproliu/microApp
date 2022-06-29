@@ -15,8 +15,8 @@ const onRouteChange = () => {
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div id='public-links' @click="onRouteChange">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/page2">Page2</router-link>
+    <router-link to="/app3">Home</router-link> |
+    <router-link to="/app3/page2">Page2</router-link>
   </div>
   <router-view></router-view>
 </template>
