@@ -1,0 +1,33 @@
+{
+  "name": "comp",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "clean": "rm -rf dist",
+    "image": "docker build -t micro-app-comp .",
+    "deploy": "docker run -d --network micro-app -p 8010:80 micro-app-comp"
+  },
+  "dependencies": {
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.10",
+    "@vue/compiler-sfc": "3.2.33",
+    "babel-loader": "8.2.5",
+    "css-loader": "6.7.1",
+    "dotenv": "^16.0.1",
+    "dotenv-expand": "^8.0.3",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.5.0",
+    "mini-css-extract-plugin": "2.6.1",
+    "minimist": "^1.2.6",
+    "serve": "13.0.2",
+    "url-loader": "4.1.1",
+    "vue-loader": "16.8.3",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  }
+}

@@ -16,8 +16,9 @@
 </template>
 
 <script>
-import microApp, { getActiveApps } from '@micro-zoe/micro-app'
+// import microApp, { getActiveApps } from '@micro-zoe/micro-app'
 // import config from './config'
+import { removeDomScope } from '@micro-zoe/micro-app'
 
 export default {
   name: 'App',
@@ -26,7 +27,7 @@ export default {
       activeIndex: '/app1',
       menus: [{
         path: '/app1',
-        name: 'child-vue3',
+        name: 'child-vue3-cli',
         index: '/app1'
       }, 
       {
@@ -38,12 +39,18 @@ export default {
         path: '/app3',
         name: 'child-vite-vue',
         index: '/app3'
+      },
+      {
+        path: '/app4',
+        name: 'child-vue3',
+        index: '/app4'
       }]
     }
   },
   created (){
     this.getActiveIndex()
     window.addEventListener('popstate', () => this.getActiveIndex())
+    removeDomScope()
   },
   methods: {
     getActiveIndex() {
@@ -51,10 +58,8 @@ export default {
       this.activeIndex = pathname
     },
     handleSelect (key) {
-      // const obj = this.menus.find(menu => menu.index === key)
-      console.log(getActiveApps())
+      // console.log(getActiveApps())
       this.activeIndex = key
-      // microApp.setData(obj.name, { path: key })
     },
     isActive (path) {
       return this.$route.path === path

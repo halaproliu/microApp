@@ -3,7 +3,8 @@
 let config = {
   app1: 'http://localhost:8001',
   app2: 'http://localhost:8002',
-  app3: 'http://localhost:8003'
+  app3: 'http://localhost:8003',
+  app4: 'http://localhost:8004'
 }
 
 // 线上环境地址
@@ -15,7 +16,8 @@ if (process.env.NODE_ENV === 'production') {
   config = {
     app1: 'http://liuwenjian.cn:8001',
     app2: 'http://liuwenjian.cn:8002',
-    app3: 'http://liuwenjian.cn:8003'
+    app3: 'http://liuwenjian.cn:8003',
+    app4: 'http://liuwenjian.cn:8004'
   }
 }
 

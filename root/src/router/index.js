@@ -18,6 +18,11 @@ const routes = [
     path: '/app3*',
     name: 'app3',
     component: () => import(/* webpackChunkName: "app1" */ '@/pages/app3.vue'),
+  },
+  {
+    path: '/app4*',
+    name: 'app4',
+    component: () => import(/* webpackChunkName: "app1" */ '@/pages/app4.vue'),
   }
 ]
 
