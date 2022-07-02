@@ -29,7 +29,11 @@ const config = merge(base, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+        HOST: JSON.stringify('http://liuwenjian.cn:8004'),
+        COMP_HOST: JSON.stringify('http://liuwenjian.cn:8010')
+      }
     }),
     new CleanWebpackPlugin(),
     // css抽离

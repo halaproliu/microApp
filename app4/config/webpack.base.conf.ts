@@ -1,5 +1,5 @@
 import { resolve } from './utils'
-import { Configuration as WebpackConfiguration, HotModuleReplacementPlugin } from "webpack"
+import { Configuration as WebpackConfiguration } from "webpack"
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import { VueLoaderPlugin } from 'vue-loader'
