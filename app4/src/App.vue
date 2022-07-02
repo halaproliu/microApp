@@ -14,7 +14,7 @@ const txt = ref('hello world')
 const Button = defineAsyncComponent({
   loader: () => loadComponent('comp', 'default', './Button', 'http://localhost:8010/remoteEntry.js')(),
   errorComponent: () => `<h2>load error</h2>`,
-  onError: (error, retry, fail, attempts) => {
+  onError: (error) => {
     console.log(error)
   }
 })
