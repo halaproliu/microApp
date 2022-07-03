@@ -12,9 +12,9 @@
  new Promise((resolve, reject) => {
    // check if remote exists on window
    let global = window
-  //  if (window.__MICRO_APP_BASE_APPLICATION__) {
-  //   global = window?.rawWindow
-  //  }
+   if (window.__MICRO_APP_BASE_APPLICATION__) {
+    global = window?.rawWindow
+   }
    if (!global[remote]) {
      // search dom to see if remote tag exists, but might still be loading (async)
      const existingRemote = document.querySelector(`[data-webpack="${remote}"]`);

@@ -1,3 +1,4 @@
+const pkg = require('./package.json')
 module.exports = {
   devServer: {
     port: 8001,
@@ -9,7 +10,13 @@ module.exports = {
     config
       .plugin('mf')
       .use(require('webpack').container.ModuleFederationPlugin, [{
-        name: 'app1'
+        name: 'app1',
+        shared: {
+          vue: {
+            eager: true,
+            singleton: true
+          }
+        }
       }])
   },
   configureWebpack: {

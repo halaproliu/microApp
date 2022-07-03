@@ -101,10 +101,13 @@ const config: Configuration = {
       filename: 'index.html'
     }),
     new ModuleFederationPlugin({
-      name: 'app4'
-      // remotes: {
-      //   comp: 'comp@http://localhost:8010/remoteEntry.js'
-      // }
+      name: 'app4',
+      shared: {
+        vue: {
+          eager: true,
+          singleton: true
+        }
+      }
     }),
     // element-plus 按需引入
     Components({
