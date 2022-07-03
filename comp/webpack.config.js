@@ -6,6 +6,9 @@ const { VueLoaderPlugin } = require('vue-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
+const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 const rawArgv = process.argv.slice(2)
 const argv = minimist(rawArgv)
@@ -39,6 +42,7 @@ module.exports = (env = {}) => ({
   target: 'web',
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
+    libraryExport: 'main', // 支持vite-plugin-federation必须
     publicPath: isProduction ? 'http://liuwenjian.cn:8010/' : 'http://localhost:8010/'
   },
   resolve: {
@@ -79,6 +83,12 @@ module.exports = (env = {}) => ({
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
+    }),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
     }),
     new ModuleFederationPlugin({
       name: 'comp',
