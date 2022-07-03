@@ -94,7 +94,7 @@ module.exports = (env = {}) => ({
       name: 'comp',
       filename: 'remoteEntry.js',
       library: {
-        type: 'umd',
+        type: 'var',
         name: 'comp'
       }, // type必须为umd或者window才能在micro-app中使用
       exposes: {

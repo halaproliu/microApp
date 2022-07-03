@@ -22,8 +22,8 @@ export default defineConfig({
       remotes: {
         comp: {
           external: `${process.env.NODE_ENV === 'production' ? 'http://liuwenjian.cn:8010' : 'http://localhost:8010'}/remoteEntry.js`,
-          format: 'var',
-          from: 'webpack'
+          format: 'var'
+          // from: 'webpack'
         },
         shared: [{
           vue: {
