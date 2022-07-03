@@ -3,7 +3,7 @@
     child-vue3
     <el-button type="primary" @click="toPath('/app2')">跳转child-react</el-button>
     <el-button type="primary" @click="transferData">传递数据到基座</el-button>
-    <Button name="zhangsan"></Button>
+    <Button name="zhangsan" style="margin-left: 40px"></Button>
   </div>
 </template>
 

@@ -9,7 +9,7 @@ import { useStore } from '@/store'
 import { ref, defineAsyncComponent } from 'vue'
 import { loadComponent } from './utils/loadComponent'
 const store = useStore()
-const txt = ref('hello world')
+const txt = ref('手动搭建vue项目')
 // const Button = defineAsyncComponent(() => import('comp/Button'))
 const Button = defineAsyncComponent({
   loader: () => loadComponent('comp', 'default', './Button', `${process.env.COMP_HOST}/remoteEntry.js`)(),
