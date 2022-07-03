@@ -42,7 +42,7 @@ module.exports = (env = {}) => ({
   target: 'web',
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    libraryExport: 'main', // 支持vite-plugin-federation必须
+    libraryExport: 'default', // 支持vite-plugin-federation必须，指定只导出指定子模块
     publicPath: isProduction ? 'http://liuwenjian.cn:8010/' : 'http://localhost:8010/'
   },
   resolve: {
