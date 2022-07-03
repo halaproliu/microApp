@@ -103,6 +103,7 @@ module.exports = (env = {}) => ({
       shared: {
         vue: {
           singleton: true,
+          requiredVersion: '^3.0.0'
         },
       },
     }),
