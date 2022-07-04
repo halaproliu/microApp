@@ -47,7 +47,6 @@ function mount () {
 
   app = createApp(App)
   app.use(router)
-  app.use(ElementPlus)
   app.mount('#app1')
 
   console.log('微应用app1渲染了')
