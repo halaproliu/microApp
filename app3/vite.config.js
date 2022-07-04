@@ -24,12 +24,7 @@ export default defineConfig({
           format: 'var',
           from: 'webpack'
         },
-        shared: [{
-          vue: {
-            singleton: true,
-            requiredVersion: pkg.dependencies.vue
-          }
-        }]
+        shared: ['vue']
       }
     }),
     (function() {
