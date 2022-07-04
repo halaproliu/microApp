@@ -7,7 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent, getCurrentInstance, onMounted } from 'vue'
+onMounted(() => console.log(getCurrentInstance()))
 const Button = defineAsyncComponent({
   loader: () => import('comp/Button'),
   suspensible: false
