@@ -8,17 +8,16 @@
 </template>
 
 <script setup>
-// import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from 'vue'
 import { loadComponent } from './utils/loadComponent'
 
-// const Button = defineAsyncComponent({
-//   loader: () => loadComponent('comp', 'default', './Button', `${process.env.VUE_APP_COMP_HOST}/remoteEntry.js`)(),
-//   errorComponent: () => `<h2>load error</h2>`,
-//   onError: (error) => {
-//     console.log(error)
-//   }
-// })
-const Button = loadComponent('comp', 'default', './Button', `${process.env.VUE_APP_COMP_HOST}/remoteEntry.js`)()
+const Button = defineAsyncComponent({
+  loader: () => loadComponent('comp', 'default', './Button', `${process.env.VUE_APP_COMP_HOST}/remoteEntry.js`)(),
+  errorComponent: () => `<h2>load error</h2>`,
+  onError: (error) => {
+    console.log(error)
+  }
+})
 
 const toPath = (path) => {
   window.history.pushState(null, '', `#${path}`)

@@ -10,6 +10,9 @@ Vue.use(ElementUI)
 
 microApp.start({
   plugins: {
+    preFetchApps: [{
+      name: 'app1', url: process.env.VUE_APP_COMP
+    }],
     modules: {
       app2: [{
         loader(code) {
