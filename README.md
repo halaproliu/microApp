@@ -68,3 +68,16 @@ library: {
   }
 }
 ```
+
+### 本地开发
+
+当有多个子项目时，启动多个项目会变得有些繁琐，可以通过在root项目添加.env.development.local文件，自定义配置，使用线上发布的代码
+
+```js
+VUE_APP_APP1=http://localhost:8001
+VUE_APP_APP2=http://liuwenjian.cn:8002  // 线上地址
+VUE_APP_APP3=http://localhost:8003
+VUE_APP_APP4=http://localhost:8004
+VUE_APP_COMP=http://localhost:8010
+```
+
