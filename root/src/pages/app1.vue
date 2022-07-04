@@ -6,12 +6,15 @@
 </template>
 
 <script>
-import config from '../config'
+// import config from '../config'
 export default {
   data () {
     return {
-      url: `${config.app1}`
+      url: process.env.VUE_APP_APP1
     }
+  },
+  created() {
+    console.log(process.env.VUE_APP_APP1)
   },
   methods: {
     handleDataChange(e) {

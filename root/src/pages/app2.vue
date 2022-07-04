@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import config from '../config'
+// import config from '../config'
 export default {
   data () {
     return {
-      url: `${config.app2}`
+      url: process.env.VUE_APP_APP2
     }
   }
 }

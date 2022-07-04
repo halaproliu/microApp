@@ -5,7 +5,6 @@ import { writeFileSync } from 'fs'
 import federation from '@originjs/vite-plugin-federation'
 import pkg from './package.json'
 
-console.log(process.env.VITE_APP_COMP_HOST);
 // https://vitejs.dev/config/
 export default defineConfig({
   // base: `${process.env.NODE_ENV === 'production' ? 'http://liuwenjian.cn' : ''}/app3/`,
@@ -64,9 +63,9 @@ export default defineConfig({
     cssCodeSplit: true,
     rollupOptions: {
       output: {
-          format: 'esm',
-          entryFileNames: 'assets/[name].js',
-          minifyInternalExports: false
+        format: 'esm',
+        entryFileNames: 'assets/[name].js',
+        minifyInternalExports: false
       }
     }
   }

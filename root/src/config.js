@@ -1,4 +1,3 @@
-
 // 开发环境地址
 let config = {
   app1: 'http://localhost:8001',
