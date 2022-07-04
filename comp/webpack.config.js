@@ -99,12 +99,7 @@ module.exports = (env = {}) => ({
       }, // type必须为umd或者window才能在micro-app中使用
       exposes: {
         './Button': './src/components/Button',
-      },
-      shared: {
-        vue: {
-          requiredVersion: '^3.0.0'
-        },
-      },
+      }
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './index.html'),
