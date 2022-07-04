@@ -3,7 +3,6 @@ import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import App from './App.vue'
 import routes from './router'
-import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
 
