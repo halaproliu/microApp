@@ -15,5 +15,11 @@ module.exports = {
     //   'Access-Control-Allow-Origin': '*',
     // },
   },
-  lintOnSave: false
+  lintOnSave: false,
+  chainWebpack: config => {
+    config.plugin('html').tap(args => {
+      args[0].title = '个人技术文章记录'
+      return args
+    })
+  }
 }

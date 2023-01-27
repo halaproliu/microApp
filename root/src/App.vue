@@ -11,7 +11,11 @@
         <router-link :to="menu.path">{{ menu.name }}</router-link>
       </el-menu-item>
     </el-menu>
-    <router-view class="container"></router-view>
+    <router-view class="container">
+    </router-view>
+    <footer class="footer">
+      <a href="https://beian.miit.gov.cn/">沪ICP备2022018712号-1</a>
+    </footer>
   </div>
 </template>
 
@@ -74,6 +78,7 @@ body
 #app
   display flex
   flex 1
+  position relative
 .app-menu
   width 200px
   height 100vh
@@ -91,4 +96,16 @@ body
   height 100vh
   overflow scroll
   width calc(100% - 200px)
+.footer
+  background #000
+  height 100px
+  width calc(100% - 200px)
+  position absolute
+  left 200px
+  bottom 0
+  display flex
+  justify-content center
+  align-items center
+  a
+    color #fff
 </style>
