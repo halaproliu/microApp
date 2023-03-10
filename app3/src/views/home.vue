@@ -14,7 +14,7 @@
           <el-form-item label="水印文案">
             <el-input v-model="text" @change="setOptions"></el-input>
           </el-form-item>
-          <el-form-item label="字体颜色">
+          <el-form-item class="color-picker" label="字体颜色">
             <el-color-picker size="large" v-model="color" show-alpha @change="setOptions" />
           </el-form-item>
           <el-form-item label="字体大小">
@@ -85,7 +85,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.box {
+.color-picker :deep(.el-color-picker__trigger) {
+  width: 170px !important;
+}
+.color-picker :deep(.el-color-picker__icon) {
+  display: none !important;
 }
 .flex {
   display: flex;
