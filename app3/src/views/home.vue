@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="mt-20">纯前端canvas添加水印</div>
-    <div class="flex mt-20">
+    <div class="flex mt-20 mb-300">
       <div class="oper-area">
         <div class="oper-area-zone ml-20 mt-20">
           <el-upload :auto-upload="false" :show-file-list="false" :on-change="onUploadChange">
@@ -22,7 +22,7 @@
           </el-form-item>
         </el-form>
       </div>
-      <div class="ml-20">
+      <div class="ml-20 mr-20">
         <canvas class="w-full" :ref="(el) => {ctxRef = el}" />
       </div>
     </div>
@@ -101,6 +101,12 @@ export default defineComponent({
 }
 .mt-20 {
   margin-top: 20px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.mb-300 {
+  margin-bottom: 300px;
 }
 .oper-area-zone {
   display: flex;
