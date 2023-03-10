@@ -10,12 +10,15 @@
     "deploy": "docker run -d --network micro-app -p 8003:80 micro-app-app3"
   },
   "dependencies": {
+    "element-plus": "^2.2.36",
     "vue": "^3.2.25",
     "vue-router": "^4.0.16"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "^1.1.6",
     "@vitejs/plugin-vue": "^2.3.3",
+    "unplugin-auto-import": "^0.15.1",
+    "unplugin-vue-components": "^0.24.1",
     "vite": "^2.9.9"
   }
 }

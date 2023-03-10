@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 import { join } from 'path'
 import { writeFileSync } from 'fs'
 import federation from '@originjs/vite-plugin-federation'
@@ -15,6 +18,12 @@ export default defineConfig({
   cacheDir: "node_modules/.cacheDir",
   plugins: [
     vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
     federation({
       name: 'app3',
       filename: 'remoteEntry.js',

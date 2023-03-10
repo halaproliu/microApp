@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
+import ElementPlus from 'element-plus'
 import routes from './router'
 import App from './App.vue'
 
@@ -43,6 +44,7 @@ function mount() {
 
   app = createApp(App)
   app.use(router)
+  app.use(ElementPlus)
   app.mount('#vite-app')
 
   console.log('微应用app3渲染了')
