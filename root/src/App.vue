@@ -41,7 +41,7 @@ export default {
       },
       {
         path: '/app3',
-        name: 'child-vite-vue',
+        name: '图片添加水印',
         index: '/app3'
       },
       {
