@@ -29,6 +29,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 export default {
   setup() {
+    let timer;
     const el = ref(null);
     let percent = ref(0);
     const loadingArr = [];
@@ -38,7 +39,7 @@ export default {
     let index = 0;
     onMounted(() => {
       const oLength = el?.value?.getTotalLength();
-      let timer = setInterval(() => {
+      timer = setInterval(() => {
         el.value.style['stroke-dashoffset'] =
           oLength - oLength * (loadingArr[index] / 100);
         percent.value = `${loadingArr[index]}%`;
@@ -55,9 +56,9 @@ export default {
     });
     return {
       el,
-      percent,
+      percent
     };
-  },
+  }
 };
 </script>
 

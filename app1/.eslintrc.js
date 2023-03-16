@@ -1,18 +1,24 @@
 module.exports = {
-  "root": true,
-  "env": {
-    "node": true
+  root: true,
+  env: {
+    node: true
   },
-  "extends": [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended"
+  plugins: ['prettier'],
+  extends: [
+    'plugin:vue/vue3-essential',
+    'plugin:prettier/recommended',
+    'eslint:recommended'
   ],
-  "parserOptions": {
-    "parser": "@babel/eslint-parser"
+  parserOptions: {
+    parser: '@babel/eslint-parser'
   },
-  "rules": {},
-  "globals": {
-    "__webpack_init_sharing__": true,
-    "__webpack_share_scopes__": true
+  rules: {
+    'quote-props': ['error', 'as-needed'],
+    quotes: ['error', 'single'],
+    indent: ['error', 2]
+  },
+  globals: {
+    __webpack_init_sharing__: true,
+    __webpack_share_scopes__: true
   }
-}
+};

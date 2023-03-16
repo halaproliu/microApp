@@ -1,8 +1,5 @@
 <template>
-  <div class="box">
-    loading components Error
-  </div>
+  <div class="box">loading components Error</div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
