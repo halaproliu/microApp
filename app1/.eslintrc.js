@@ -13,6 +13,7 @@ module.exports = {
     parser: '@babel/eslint-parser'
   },
   rules: {
+    'no-unused-components': 'off',
     'quote-props': ['error', 'as-needed'],
     quotes: ['error', 'single'],
     indent: ['error', 2]
